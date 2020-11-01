@@ -8,113 +8,128 @@
         Title="Visor de imágenes"
         Height="650.533"
         Width="786.5"
+        Icon="icon.ico"
         MinHeight="650.533"
         MinWidth="786.5">
-    
+
+    <!--Etilos-->
+    <Window.Resources>
+
+        <!--Etilo Botones-->
+        <Style TargetType="Button">
+
+            <Setter Property="Height"
+                    Value="20" />
+
+            <Setter Property="Width"
+                    Value="120" />
+
+            <Setter Property="Margin"
+                    Value="5" />
+
+            <Setter Property="VerticalAlignment"
+                    Value="Top" />
+
+        </Style>
+
+        <!--Etilo Image-->
+        <Style TargetType="Image">
+
+            <Setter Property="Width"
+                    Value="150" />
+
+            <Setter Property="Source"
+                    Value="episodioIV.jpg" />
+
+        </Style>
+
+        <!--Etilo TextBlock bottom-->
+        <Style TargetType="TextBlock"
+               x:Key="TextBlockBottom">
+
+            <Setter Property="FontSize"
+                    Value="20" />
+
+            <Setter Property="FontWeight"
+                    Value="Bold" />
+
+        </Style>
+
+
+
+    </Window.Resources>
+
     <DockPanel LastChildFill="True">
-            <Border DockPanel.Dock="Right"
-                    Margin="10,10,10,80"
-                    CornerRadius="3"
-                    BorderBrush="Black"
-                    BorderThickness="3">
+        <Border DockPanel.Dock="Right"
+                Margin="10,10,10,80"
+                CornerRadius="3"
+                BorderBrush="Black"
+                BorderThickness="3">
 
-                <DockPanel LastChildFill="True"
-                           Background="LightGreen"
-                           Width="140">
+            <DockPanel LastChildFill="False"
+                       Background="LightGreen"
+                       Width="140">
 
-                    <Button DockPanel.Dock="Top"
-                            Content="Añadir imagen"
-                            Height="20"
-                            VerticalAlignment="Top"
-                            Margin="5"
-                            Width="120" />
+                <Button DockPanel.Dock="Top"
+                        Content="Añadir imagen" />
 
-                    <Button DockPanel.Dock="Top"
-                            Content="Eliminar imagen"
-                            Height="20"
-                            VerticalAlignment="Top"
-                            Margin="5"
-                            Width="120" />
+                <Button DockPanel.Dock="Top"
+                        Content="Eliminar imagen" />
 
-                    <Button DockPanel.Dock="Top"
-                            Content="Eliminar todas"
-                            Height="20"
-                            VerticalAlignment="Top"
-                            Margin="5"
-                            Width="120" />
+                <Button DockPanel.Dock="Top"
+                        Content="Eliminar todas" />
 
-                    <Button DockPanel.Dock="Bottom"
-                            Content="Recortar"
-                            Height="20"
-                            VerticalAlignment="Top"
-                            Margin="5"
-                            Width="120" />
+                <Button DockPanel.Dock="Bottom"
+                        Content="Recortar" />
 
-                    <Button DockPanel.Dock="Bottom"
-                            Content="Rotar"
-                            Height="20"
-                            VerticalAlignment="Top"
-                            Margin="5"
-                            Width="120" />
+                <Button DockPanel.Dock="Bottom"
+                        Content="Rotar" />
 
-                    <TextBlock />
+            </DockPanel>
+        </Border>
 
-                </DockPanel>
-            </Border>
+        <TextBlock DockPanel.Dock="Top"
+                   Text="Visor de imágenes"
+                   TextAlignment="Center"
+                   FontFamily="Rubik"
+                   FontSize="40">
 
-            <TextBlock DockPanel.Dock="Top"
-                     Text="Visor de imágenes"
-                     TextAlignment="Center"
-                     FontFamily="Rubik"
-                     FontSize="40">
+        </TextBlock>
+
+        <DockPanel DockPanel.Dock="Bottom"
+                   Margin="10,10,-156,10"
+                   Height="60"
+                   Background="LightBlue">
+
+            <TextBlock Style="{StaticResource TextBlockBottom}"
+                       DockPanel.Dock="Right"
+                       Text="Diseñado por Pedro José Martínez"
+                       Margin="0,16"
+                       Width="329">
 
             </TextBlock>
 
-            <DockPanel DockPanel.Dock="Bottom"
-                       Margin="10,10,-156,10"
-                       Height="60"
-                       Background="LightBlue">
+            <TextBlock Style="{StaticResource TextBlockBottom}"
+                       DockPanel.Dock="Left"
+                       Text="Nº de imágenes: 10"
+                       VerticalAlignment="Center">
 
-                <TextBlock DockPanel.Dock="Right"
-                           Text="Diseñado por Pedro José Martínez"
-                           FontSize="20"
-                           FontWeight="Bold"
-                           Margin="0,16"
-                           Width="329">
+            </TextBlock>
 
-                </TextBlock>
-                
-                <TextBlock DockPanel.Dock="Left"
-                           Text="Nº de imágenes: 10"
-                           FontSize="20"
-                           VerticalAlignment="Center"
-                           FontWeight="Bold">
-
-                </TextBlock>
-
-                
-
-            </DockPanel>
-
-            <WrapPanel>
-                <Image Source="episodioIV.jpg"
-                       Width="150" />
-                <Image Source="episodioIV.jpg"
-                       Width="150" />
-                <Image Source="episodioIV.jpg"
-                       Width="150" />
-                <Image Source="episodioIV.jpg"
-                       Width="150" />
-                <Image Source="episodioIV.jpg"
-                       Width="150" />
-                <Image Source="episodioIV.jpg"
-                       Width="150" />
-                <Image Source="episodioIV.jpg"
-                       Width="150" />
-                <Image Source="episodioIV.jpg"
-                       Width="150" />
-
-            </WrapPanel>
         </DockPanel>
+
+        <WrapPanel>
+            <Image />
+            <Image />
+            <Image />
+            <Image />
+            <Image />
+            <Image />
+            <Image />
+            <Image />
+
+        </WrapPanel>
+
+    </DockPanel>
 
 </Window>
